@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="610.0" prefWidth="800.0" spacing="20.0" styleClass="vbox" stylesheets="@../estilos.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.iesalandalus.programacion.tutorias.mvc.vista.iugrafica.controladoresvistas.ControladorBorrarCita">
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="579.0" prefWidth="800.0" spacing="20.0" styleClass="vbox" stylesheets="@../estilos.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.iesalandalus.programacion.tutorias.mvc.vista.iugrafica.controladoresvistas.ControladorMostrarCita">
    <padding>
       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
    </padding>
@@ -42,7 +42,7 @@
             <Label fx:id="lbHoraCita" prefHeight="45.0" prefWidth="197.0" GridPane.columnIndex="3" GridPane.rowIndex="7" />
             <Label fx:id="lbCorreoAlumno" prefHeight="49.0" prefWidth="216.0" GridPane.columnIndex="1" GridPane.rowIndex="10" />
             <Label style="-fx-font-weight: bold;" text="Expediente:" GridPane.halignment="RIGHT" GridPane.rowIndex="11" />
-            <Label fx:id="lbExpediente" prefHeight="58.0" prefWidth="216.0" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+            <Label fx:id="lbExpediente" prefHeight="63.0" prefWidth="216.0" GridPane.columnIndex="1" GridPane.rowIndex="11" />
          </children>
          <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" maxWidth="280.0" minWidth="10.0" prefWidth="177.0" />
@@ -68,9 +68,8 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
          </rowConstraints>
       </GridPane>
-      <HBox alignment="CENTER" prefHeight="50.0" prefWidth="600.0" spacing="30.0">
+      <HBox alignment="CENTER" prefHeight="50.0" prefWidth="600.0">
          <children>
-            <Button fx:id="btBorrar" mnemonicParsing="false" onAction="#borrar" text="Borrar" />
             <Button fx:id="btAceptar" mnemonicParsing="false" onAction="#aceptar" text="Aceptar" />
          </children>
       </HBox>

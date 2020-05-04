@@ -47,3 +47,8 @@
 	-fx-font: 20 "arial";
 	-fx-base: #dc143c;
 }
+
+#btMostrarTodo {
+	-fx-font: 22 "arial";
+	-fx-base: #ffd1b3;
+}
