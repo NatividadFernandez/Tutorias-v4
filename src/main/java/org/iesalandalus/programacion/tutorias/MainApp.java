@@ -12,9 +12,21 @@ public class MainApp {
 
 	public static void main(String[] args) {
 		Modelo modelo = new Modelo(FactoriaFuenteDatos.FICHEROS.crear());
-		IVista vista = FactoriaVista.TEXTO.crear();
+		IVista vista = procesarArgumentos(args);
 		IControlador controlador = new Controlador(modelo, vista);
 		controlador.comenzar();
+	}
+
+	private static IVista procesarArgumentos(String[] args) {
+		IVista vista = FactoriaVista.IUGRAFICA.crear();
+		for (String argumento : args) {
+			if (argumento.equalsIgnoreCase("-vgrafica")) {
+				vista = FactoriaVista.IUGRAFICA.crear();
+			} else if (argumento.equalsIgnoreCase("-vtexto")) {
+				vista = FactoriaVista.TEXTO.crear();
+			}
+		}
+		return vista;
 	}
 
 }

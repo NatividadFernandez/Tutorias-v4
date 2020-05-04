@@ -1,6 +1,5 @@
 package org.iesalandalus.programacion.tutorias.mvc.vista.iugrafica;
 
-
 import org.iesalandalus.programacion.tutorias.mvc.controlador.IControlador;
 import org.iesalandalus.programacion.tutorias.mvc.vista.IVista;
 import org.iesalandalus.programacion.tutorias.mvc.vista.iugrafica.utilidades.Dialogos;
@@ -13,9 +12,8 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 
-
 public class VistaIUGrafica extends Application implements IVista {
-	
+
 	private static IControlador controladorMVC = null;
 
 	@Override
@@ -32,12 +30,13 @@ public class VistaIUGrafica extends Application implements IVista {
 	public void terminar() {
 		controladorMVC.terminar();
 	}
-	
+
 	@Override
 	public void start(Stage escenarioPrincipal) {
 		try {
-			FXMLLoader cargadorVentanaPrincipal = new FXMLLoader(getClass().getResource("vistas/VentanaPrincipal.fxml"));
-			VBox raiz = cargadorVentanaPrincipal.load();	
+			FXMLLoader cargadorVentanaPrincipal = new FXMLLoader(
+					getClass().getResource("vistas/VentanaPrincipal.fxml"));
+			VBox raiz = cargadorVentanaPrincipal.load();
 			ControladorVentanaPrincipal cVentanaPrincipal = cargadorVentanaPrincipal.getController();
 			cVentanaPrincipal.setControladorMVC(controladorMVC);
 
@@ -47,18 +46,18 @@ public class VistaIUGrafica extends Application implements IVista {
 			escenarioPrincipal.setScene(escena);
 			escenarioPrincipal.setResizable(false);
 			escenarioPrincipal.show();
-		} catch(Exception e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
-	
+
 	private void confirmarSalida(Stage escenarioPrincipal, WindowEvent e) {
-		if (Dialogos.mostrarDialogoConfirmacion("Salir", "¿Estás seguro de que quieres salir de la aplicación?", escenarioPrincipal)) {
+		if (Dialogos.mostrarDialogoConfirmacion("Salir", "¿Estás seguro de que quieres salir de la aplicación?",
+				escenarioPrincipal)) {
 			controladorMVC.terminar();
 			escenarioPrincipal.close();
-		}
-		else {
-			e.consume();	
+		} else {
+			e.consume();
 		}
 	}
 
