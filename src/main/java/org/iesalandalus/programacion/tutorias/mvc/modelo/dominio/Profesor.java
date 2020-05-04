@@ -66,7 +66,7 @@ public class Profesor implements Serializable {
 
 		if (dni.matches(ER_DNI)) {
 			if (!(comprobarLetraDNI(dni) == false)) {
-				this.dni = dni;
+				this.dni = dni.toUpperCase();
 			} else {
 
 				throw new IllegalArgumentException("ERROR: La letra del DNI no es correcta.");
@@ -139,9 +139,9 @@ public class Profesor implements Serializable {
 		char[] caracteres = { 'T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V',
 				'H', 'L', 'C', 'K', 'E' };
 
-		letraDni.toUpperCase();
+		String letraMayuscula = letraDni.toUpperCase();
 		// Pasamos a char letraDni para poder comprarlo con el array de caracteres
-		char letraDniCaracter = letraDni.toUpperCase().charAt(0);
+		char letraDniCaracter = letraMayuscula.charAt(0);
 
 		// Comprobamos la letra que ha introducido el usuario con la letra que hemos
 		// obtenido nosotros
