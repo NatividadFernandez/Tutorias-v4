@@ -86,13 +86,10 @@ public class ControladorAnadirSesion {
 				.setCellValueFactory(tutoria -> new SimpleStringProperty(tutoria.getValue().getProfesor().getNombre()));
 		tcDni.setCellValueFactory(tutoria -> new SimpleStringProperty(tutoria.getValue().getProfesor().getDni()));
 		tcCorreo.setCellValueFactory(tutoria -> new SimpleStringProperty(tutoria.getValue().getProfesor().getCorreo()));
-		tfInicioSesion.textProperty()
-		.addListener((ob, ov, nv) -> compruebaCampoTexto(ER_OBLIGATORIO, tfInicioSesion));
-		tfFinSesion.textProperty()
-		.addListener((ob, ov, nv) -> compruebaCampoTexto(ER_OBLIGATORIO, tfFinSesion));
-		tfMinutos.textProperty()
-		.addListener((ob, ov, nv) -> compruebaCampoTexto(ER_OBLIGATORIO, tfMinutos));
-	
+		tfInicioSesion.textProperty().addListener((ob, ov, nv) -> compruebaCampoTexto(ER_OBLIGATORIO, tfInicioSesion));
+		tfFinSesion.textProperty().addListener((ob, ov, nv) -> compruebaCampoTexto(ER_OBLIGATORIO, tfFinSesion));
+		tfMinutos.textProperty().addListener((ob, ov, nv) -> compruebaCampoTexto(ER_OBLIGATORIO, tfMinutos));
+
 	}
 
 	@FXML

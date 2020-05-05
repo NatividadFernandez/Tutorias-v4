@@ -58,7 +58,7 @@ public class ControladorBorrarCita {
 
 	@FXML
 	private Label lbCorreoAlumno;
-	
+
 	@FXML
 	private Label lbExpediente;
 

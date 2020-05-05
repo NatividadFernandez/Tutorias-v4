@@ -50,7 +50,7 @@ public class ControladorMostrarCita {
 
 	@FXML
 	private Label lbCorreoAlumno;
-	
+
 	@FXML
 	private Label lbExpediente;
 
